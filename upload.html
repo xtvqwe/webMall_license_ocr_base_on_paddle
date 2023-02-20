@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <style>
+      #mask{
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        background-color: rgba(255,255,255,0.9);
+      }
+      .addPicWin{
+        display: block;
+        width: 30%;
+        height: 35%;
+        left: 35%;
+        top:25%;
+        position: absolute;
+        border: 1px solid #bbb;
+      }
+      .obverse_win{
+        display: block;
+        width: 40%;
+        left: 30%;
+        top:5%;
+        position: relative;
+        border: 1px solid #bbb;
+      }
+      .row{
+        display: block;
+        left: 20%;
+        top:10%;
+        position: relative;
+      }
+      .close{
+        display: block;
+        left: 45%;
+        top:90%;
+        position: relative;
+      }
+      .loading{
+        display: block;
+        height: 30%;
+        left: 35%;
+        top:20%;
+        position: relative;
+      }
+      table{
+        border-collapse:collapse; 
+        border-style:solid;
+        text-align:center;
+      }
+      td{
+        border-style:solid;
+        border-color:#4682B4
+      }
+      .table_button{
+        border: none;
+        background-color: #FFFFFF;
+        text-decoration:underline;
+        color: #0000FF;
+      }
+
+
+    </style>
+    <h2 style="text-align:center;">电商资质OCR</h2>
+    <div style="width: 20%; left:0px; position:relative;">
+      <button onclick="addPic()">上传文件</button>
+      <button onclick="refresh()">刷新</button>
+    </div>
+    <div style="top:10px; left:0px; min-height: 90%; position:relative; border: 1px solid #bbb;">
+      <div style="top: 0%; left: 0%; width:20%; ;min-height: 100%; position: absolute; border: 1px solid #bbb;">
+        <h4 style="text-align:center;">已上传待识别图片</h4>
+        <button onclick="multi_produce()" id="bpd" style="margin: 5%; position:relative;font-weight:bold;">批量识别</button>
+        <button onclick="del_all()" style="left:30%; position:relative; margin: 5%;">全部删除</button>
+        <div id="pics" style="left:5%; position:relative"></div>
+      </div>
+      <div style="top: 0%; left: 20%; width:60%;min-height: 100%; position: absolute; border: 1px solid #bbb;">
+        <h4 style="text-align:center;">已匹配资质</h4>
+        <button style="left:84%;position:relative; margin: 5px;" onclick="clear_sync()">初始化</button>
+        <button style="left:84%;position:relative; margin: 5px;" onclick="sync_tab()">保存匹配结果</button>
+        <table id="tab0" width="100%" bordercolor="#4682B4">
+        </table>
+      </div>
+
+      <div style="top: 0%; left: 80%; width:20%;min-height: 100%; position: absolute; border: 1px solid #bbb;">
+        <h4 style="text-align:center;">无法识别资质</h4>
+        <table id="tab2" width="100%" bordercolor="#4682B4">
+        </table>
+      </div>
+    </div>
+    <script src="/static/addFile.js"></script>
+</body>
+</html>
+
+
