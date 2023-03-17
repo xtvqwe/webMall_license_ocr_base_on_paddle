@@ -696,6 +696,4 @@ def type_test(tname):
 
 if __name__=='__main__':
     #get_datas()
-    #type_test('./ocr/static/tmp_license/prove_4_0.jpg')
-    a=[1,2]
-    print(a[1:2])
+    type_test('./ocr/static/tmp_license/prove_4_0.jpg')
